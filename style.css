@@ -185,6 +185,19 @@ img, svg {
   50% { transform: translateY(-4px); }
 }
 
+/* Hero cat animation: cat hops to the chair and back */
+.hero-cat {
+  animation: cat-to-chair 6s ease-in-out infinite !important;
+}
+
+@keyframes cat-to-chair {
+  0%, 15% { transform: translateX(0) translateY(0); }
+  30% { transform: translateX(0) translateY(-12px); }
+  45%, 55% { transform: translateX(11rem) translateY(0); }
+  70% { transform: translateX(0) translateY(-12px); }
+  85%, 100% { transform: translateX(0) translateY(0); }
+}
+
 .demo-text {
   font-size: clamp(1.125rem, 3vw, 1.5rem);
   font-weight: 600;
@@ -316,6 +329,34 @@ img, svg {
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #f5f5f7;
+}
+
+.insight-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9375rem;
+  color: #a1a1a6;
+}
+
+.insight-link-anchor {
+  color: #2997ff;
+  transition: color 0.2s ease;
+}
+
+.insight-link-anchor:hover {
+  color: #64b5f6;
+}
+
+/* ===== Ruby Text (furigana demo) ===== */
+
+ruby {
+  ruby-align: center;
+}
+
+rt {
+  font-size: 0.55em;
+  color: var(--color-text-secondary);
+  font-weight: 400;
 }
 
 /* ===== Audience Grid ===== */
@@ -821,6 +862,54 @@ img, svg {
 .science-updated {
   font-size: 0.8125rem;
   color: var(--color-text-secondary);
+}
+
+/* ===== Dark Mode ===== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f5f5f7;
+    --color-text-secondary: #a1a1a6;
+    --color-bg: #000000;
+    --color-bg-light: #1c1c1e;
+    --color-bg-dark: #1c1c1e;
+    --color-accent: #2997ff;
+    --color-accent-hover: #64b5f6;
+    --color-border: #38383a;
+  }
+
+  .nav {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .section-dark {
+    background: #000000;
+  }
+
+  .section-light {
+    background: #1c1c1e;
+  }
+
+  .compare-table td {
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .compare-highlight {
+    background: rgba(41, 151, 255, 0.1);
+  }
+
+  .footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .privacy-footer-note {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .prose-rule {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 /* ===== Responsive ===== */

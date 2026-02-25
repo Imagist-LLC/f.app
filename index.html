@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phonetic — Reading Training Wheels</title>
-  <meta name="description" content="Emoji scaffolds that teach anyone to read. Kids learn their first language. Adults learn their next one. Same app, same mechanic.">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="Phonetic — Reading Training Wheels">
-  <meta property="og:description" content="Emoji scaffolds that teach anyone to read. Kids learn their first language. Adults learn their next one.">
+  <title>Phonetic | Reading Training Wheels</title>
+  <meta name="description" content="Emoji above words teach anyone to read. Kids learn their first language. Adults learn their next one. Same app, same mechanic.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Phonetic | Reading Training Wheels">
+  <meta property="og:description" content="Emoji above words teach anyone to read. Kids learn their first language. Adults learn their next one.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://f.app">
   <link rel="stylesheet" href="style.css">
@@ -34,20 +35,19 @@
   <section class="hero">
     <div class="hero-inner">
       <p class="hero-eyebrow">Reading training wheels</p>
-      <h1 class="hero-title">You got this.</h1>
+      <h1 class="hero-title">Read a New Language</h1>
       <p class="hero-subtitle">
-        Emoji scaffolds that teach anyone to read.<br>
-        Kids learn their first language. Adults learn their next one.<br>
-        Same app. Same mechanic. One subscription.
+        Emoji above words teach anyone to read.<br>
+        Kids learn their first language. Adults learn their next one.
       </p>
 
-      <div class="hero-demo" aria-label="Example: The cat sits on the grass, with emoji annotations above key words">
-        <div class="demo-sentence">
+      <div class="hero-demo" aria-label="Example: The cat sits on the chair, with emoji annotations above key words">
+        <div class="demo-sentence hero-sentence">
           <div class="demo-word">
             <span class="demo-plain">The</span>
           </div>
           <div class="demo-word scaffolded">
-            <span class="demo-emoji" aria-hidden="true">🐱</span>
+            <span class="demo-emoji hero-cat" aria-hidden="true">🐱</span>
             <span class="demo-text">cat</span>
           </div>
           <div class="demo-word">
@@ -61,11 +61,7 @@
       </div>
 
       <a href="#" class="cta-button" aria-label="Download on the App Store">
-        <svg class="app-store-badge" viewBox="0 0 120 40" role="img" aria-label="App Store">
-          <rect width="120" height="40" rx="6" fill="#000"/>
-          <text x="60" y="14" text-anchor="middle" fill="#fff" font-size="7" font-family="Inter, sans-serif">Download on the</text>
-          <text x="60" y="27" text-anchor="middle" fill="#fff" font-size="12" font-weight="600" font-family="Inter, sans-serif">App Store</text>
-        </svg>
+        <img src="/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
       </a>
     </div>
   </section>
@@ -75,14 +71,15 @@
     <div class="section-inner">
       <h2 class="section-title">How it works</h2>
       <p class="section-subtitle">
-        Emoji float above words like furigana in Japanese &mdash; providing instant visual meaning
-        while you learn to decode the text below. As words are mastered, the scaffolds fade away.
+        Emoji float above words, just like <ruby>猫<rt>ねこ</rt></ruby> reading guides in Japanese.
+        They give you instant meaning while you learn to decode the text underneath.
+        As you master each word, the training wheels come off.
       </p>
 
       <div class="modes">
         <div class="mode-card">
           <h3 class="mode-label">Learn to Read</h3>
-          <p class="mode-description">For pre-literate children ages 2+. The emoji IS the meaning &mdash; no translation needed.</p>
+          <p class="mode-description">For pre-literate children ages 2+. The emoji IS the meaning. No translation needed.</p>
           <div class="mode-demo" aria-label="Native reading example: The dog found a bone">
             <div class="demo-sentence">
               <div class="demo-word">
@@ -105,21 +102,21 @@
 
         <div class="mode-card">
           <h3 class="mode-label">Learn a Language</h3>
-          <p class="mode-description">For learners of any age. Source word + emoji scaffold enable immersion from day one.</p>
-          <div class="mode-demo" aria-label="Language learning example: El gato se sienta en la hierba, with English words and emoji above">
+          <p class="mode-description">For learners of any age. Source word + emoji let you read in a new language from day one.</p>
+          <div class="mode-demo" aria-label="Language learning example: sun and moon in Spanish with English and emoji above">
             <div class="demo-sentence">
               <div class="demo-word scaffolded tri">
-                <span class="demo-source">water</span>
-                <span class="demo-emoji" aria-hidden="true">💧</span>
-                <span class="demo-text">agua</span>
+                <span class="demo-source">sun</span>
+                <span class="demo-emoji" aria-hidden="true">☀️</span>
+                <span class="demo-text">sol</span>
               </div>
               <div class="demo-word">
-                <span class="demo-plain">,</span>
+                <span class="demo-plain">y</span>
               </div>
               <div class="demo-word scaffolded tri">
-                <span class="demo-source">please</span>
-                <span class="demo-emoji" aria-hidden="true">🙏</span>
-                <span class="demo-text">por favor</span>
+                <span class="demo-source">moon</span>
+                <span class="demo-emoji" aria-hidden="true">🌙</span>
+                <span class="demo-text">luna</span>
               </div>
             </div>
           </div>
@@ -132,10 +129,13 @@
   <section class="section section-dark" id="insight">
     <div class="section-inner">
       <blockquote class="insight-quote">
-        Learning to read and learning to read a new language are the same cognitive process &mdash;
-        decoding unfamiliar symbols into meaning. Emoji are the universal bridge both toddlers
-        and adults already understand.
+        Learning to read and learning a new language are the same cognitive process:
+        decoding unfamiliar symbols into meaning. Emoji are the universal bridge.
       </blockquote>
+      <p class="insight-link">
+        This isn't a guess. It's backed by decades of cognitive science research.
+        <a href="/science/" class="insight-link-anchor">Read the research &rarr;</a>
+      </p>
     </div>
   </section>
 
@@ -145,14 +145,15 @@
       <h2 class="section-title">For everyone</h2>
       <p class="section-subtitle">
         One mechanic that grows with the learner. A child starts by learning to read
-        English with emoji help, then graduates to learning Spanish with the same emoji help.
+        English with emoji help, then graduates to learning Spanish the same way.
+        Same app. Same mechanic. One subscription.
       </p>
 
       <div class="audience-grid">
         <div class="audience-card">
           <span class="audience-emoji" aria-hidden="true">👶</span>
           <h3>Pre-literate children</h3>
-          <p>Ages 2+. A toddler who can't read sees 🐱 above "cat" &mdash; the emoji IS the meaning. This is how they learn to read.</p>
+          <p>Ages 2+. A toddler who can't read sees 🐱 above "cat" and instantly understands. The emoji IS the meaning.</p>
         </div>
         <div class="audience-card">
           <span class="audience-emoji" aria-hidden="true">🧒</span>
@@ -162,7 +163,7 @@
         <div class="audience-card">
           <span class="audience-emoji" aria-hidden="true">🧑‍💼</span>
           <h3>Adult learners</h3>
-          <p>Clean, low-pressure vocabulary acquisition. Emoji provides instant comprehension without routing through your native language &mdash; true immersion from word one.</p>
+          <p>Clean, low-pressure vocabulary acquisition. Emoji provides instant comprehension without routing through your native language. True immersion from word one.</p>
         </div>
         <div class="audience-card">
           <span class="audience-emoji" aria-hidden="true">♿</span>
@@ -183,17 +184,17 @@
         <div class="tier-card">
           <div class="tier-icon" aria-hidden="true">🐱</div>
           <h3>Nouns &rarr; Emoji</h3>
-          <p>Concrete things get emoji. Cat, dog, sun, house, book &mdash; instant visual meaning that a toddler or language learner grasps immediately.</p>
+          <p>Concrete things get emoji. Cat, dog, sun, house, book. Instant visual meaning that a toddler or language learner grasps immediately.</p>
         </div>
         <div class="tier-card">
           <div class="tier-icon tier-icon-animated" aria-hidden="true">⬆️</div>
           <h3>Verbs &rarr; Animation</h3>
-          <p>Actions become motion. "Jumped" bounces. "Ran" slides. The child sees the action happen &mdash; no symbol needed, the movement is the meaning.</p>
+          <p>Actions become motion. "Jumped" bounces. "Ran" slides. The child sees the action happen. No symbol needed. The movement IS the meaning.</p>
         </div>
         <div class="tier-card">
           <div class="tier-icon" aria-hidden="true">···</div>
           <h3>Function words &rarr; Repetition</h3>
-          <p>"The," "a," "in," "on" &mdash; these don't need scaffolding. They need exposure. Fifty sentences and "the" becomes a sight word.</p>
+          <p>"The," "a," "in," "on." These words don't need scaffolding. They need exposure. Fifty sentences and "the" becomes a sight word.</p>
         </div>
       </div>
     </div>
@@ -214,27 +215,27 @@
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">🧠</div>
           <h3>Apple Intelligence</h3>
-          <p>On-device AI generates personalized sentences, adapts difficulty, and creates quizzes &mdash; all without an internet connection.</p>
+          <p>On-device AI generates personalized sentences, adapts difficulty, and creates quizzes. All without an internet connection.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">🌍</div>
           <h3>19 languages</h3>
-          <p>Spanish, French, German, Japanese, Korean, Arabic, Chinese, and more. Download language packs once, learn anywhere.</p>
+          <p>Spanish, French, German, Japanese, Korean, Arabic, Chinese, and more. All translation happens on-device.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
           <h3>Family friendly</h3>
-          <p>No ads. No distractions. No gimmicks. Parents learning Spanish and kids learning to read &mdash; one subscription, one app.</p>
+          <p>No ads. No distractions. No gimmicks. Parents learning Spanish and kids learning to read. One subscription, one app.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">♿</div>
           <h3>Fully accessible</h3>
-          <p>VoiceOver, Dynamic Type, Switch Control, Reduce Motion. Accessibility isn't a bolt-on &mdash; it's the core mechanic.</p>
+          <p>VoiceOver, Dynamic Type, Switch Control, Reduce Motion. Accessibility isn't a bolt-on. It's the core mechanic.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">✨</div>
-          <h3>Liquid Glass</h3>
-          <p>Built with SwiftUI and Apple's latest design language. Beautiful, fast, and native on iPhone and iPad.</p>
+          <h3>Native design</h3>
+          <p>Built with SwiftUI for Apple's latest design language. Beautiful, fast, and native on iPhone and iPad.</p>
         </div>
       </div>
     </div>
@@ -244,7 +245,7 @@
   <section class="section section-dark" id="languages">
     <div class="section-inner">
       <h2 class="section-title">Your next language</h2>
-      <p class="section-subtitle">All translation happens on-device using Apple's Translation framework. No internet required after downloading a language pack.</p>
+      <p class="section-subtitle">All translation happens on-device. No internet required.</p>
       <div class="languages-list">
         <span class="lang-tag">Spanish</span>
         <span class="lang-tag">French</span>
@@ -338,7 +339,6 @@
           <ul class="pricing-features">
             <li>1 language</li>
             <li>Core vocabulary</li>
-            <li>Daily sentence limit</li>
             <li>Full accessibility</li>
           </ul>
         </div>
@@ -348,7 +348,6 @@
           <p class="pricing-annual">or $39.99/year</p>
           <ul class="pricing-features">
             <li>All 19 languages</li>
-            <li>Unlimited sentences</li>
             <li>Full vocabulary tracking</li>
             <li>Advanced spaced repetition</li>
             <li>Family Sharing</li>
@@ -371,13 +370,9 @@
   <section class="section section-cta">
     <div class="section-inner">
       <h2 class="cta-title">You got this.</h2>
-      <p class="cta-subtitle">Reading training wheels that come off when you don't need them anymore.</p>
+      <p class="cta-subtitle">Start with emoji. End with fluency.</p>
       <a href="#" class="cta-button" aria-label="Download on the App Store">
-        <svg class="app-store-badge" viewBox="0 0 120 40" role="img" aria-label="App Store">
-          <rect width="120" height="40" rx="6" fill="#000"/>
-          <text x="60" y="14" text-anchor="middle" fill="#fff" font-size="7" font-family="Inter, sans-serif">Download on the</text>
-          <text x="60" y="27" text-anchor="middle" fill="#fff" font-size="12" font-weight="600" font-family="Inter, sans-serif">App Store</text>
-        </svg>
+        <img src="/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
       </a>
     </div>
   </section>
@@ -387,7 +382,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="footer-logo">Phonetic</span>
-        <p class="footer-tagline">by <a href="https://imagist.app" class="footer-link">Imagist</a></p>
+        <p class="footer-tagline">by <a href="https://inklings.app" class="footer-link">Inklings</a></p>
       </div>
       <div class="footer-links">
         <a href="mailto:hello@f.app" class="footer-link">Contact</a>
@@ -395,7 +390,7 @@
         <a href="/science/" class="footer-link">The Science</a>
         <a href="#" class="footer-link">Press Kit</a>
       </div>
-      <p class="footer-copy">&copy; 2025 Imagist LLC. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2025 Inklings, Inc. All rights reserved.</p>
     </div>
   </footer>
 
