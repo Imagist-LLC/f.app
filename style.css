@@ -735,6 +735,94 @@ img, svg {
   color: var(--color-text);
 }
 
+/* ===== Science / Article Page ===== */
+
+.science-page {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.science-title {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.science-lede {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.prose-rule {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 2.5rem 0;
+}
+
+.prose strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.citations {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-light);
+  border-radius: 0.75rem;
+}
+
+.citations h3 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.citations ul {
+  padding-left: 0;
+}
+
+.citations li {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.citations li::before {
+  content: none;
+}
+
+.science-table th:first-child,
+.science-table td:first-child {
+  text-align: left;
+}
+
+.science-table td {
+  font-size: 0.8125rem;
+}
+
+.science-closing {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+}
+
+.science-updated {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
 /* ===== Responsive ===== */
 
 @media (max-width: 768px) {
