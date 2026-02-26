@@ -185,17 +185,25 @@ img, svg {
   50% { transform: translateY(-4px); }
 }
 
-/* Hero cat animation: cat hops to the chair and back */
+/* Hero animation: cat and chair converge above "sits" */
 .hero-cat {
-  animation: cat-to-chair 6s ease-in-out infinite !important;
+  animation: cat-to-sits 6s ease-in-out infinite !important;
 }
 
-@keyframes cat-to-chair {
+.hero-chair {
+  animation: chair-to-sits 6s ease-in-out infinite !important;
+}
+
+@keyframes cat-to-sits {
   0%, 15% { transform: translateX(0) translateY(0); }
-  30% { transform: translateX(0) translateY(-12px); }
-  45%, 55% { transform: translateX(11rem) translateY(0); }
-  70% { transform: translateX(0) translateY(-12px); }
-  85%, 100% { transform: translateX(0) translateY(0); }
+  35%, 60% { transform: translateX(5.5rem) translateY(-6px); }
+  80%, 100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes chair-to-sits {
+  0%, 15% { transform: translateX(0) translateY(0); }
+  35%, 60% { transform: translateX(-5.5rem) translateY(0); }
+  80%, 100% { transform: translateX(0) translateY(0); }
 }
 
 .demo-text {
@@ -632,20 +640,18 @@ rt {
   padding: 8rem 1.5rem;
 }
 
-.cta-title {
-  font-size: clamp(2.5rem, 7vw, 4rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.75rem;
+.cta-sentence {
+  margin-bottom: 2.5rem;
 }
 
-.cta-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: var(--color-text-secondary);
-  margin-bottom: 2.5rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+.cta-sentence .demo-emoji {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.cta-word {
+  font-size: clamp(2.5rem, 7vw, 4rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em;
 }
 
 /* ===== Footer ===== */
