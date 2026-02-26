@@ -25,6 +25,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Inherit Dynamic Type preferred size on iOS */
+  font: -apple-system-body;
+  font-family: var(--font);
 }
 
 body {
@@ -187,22 +190,26 @@ img, svg {
 
 /* Hero animation: cat and chair converge above "sits" */
 .hero-cat {
+  position: relative;
+  z-index: 2;
   animation: cat-to-sits 6s ease-in-out infinite !important;
 }
 
 .hero-chair {
+  position: relative;
+  z-index: 1;
   animation: chair-to-sits 6s ease-in-out infinite !important;
 }
 
 @keyframes cat-to-sits {
   0%, 15% { transform: translateX(0) translateY(0); }
-  35%, 60% { transform: translateX(3.5rem) translateY(-6px); }
+  35%, 60% { transform: translateX(2.5rem) translateY(-6px); }
   80%, 100% { transform: translateX(0) translateY(0); }
 }
 
 @keyframes chair-to-sits {
   0%, 15% { transform: translateX(0) translateY(0); }
-  35%, 60% { transform: translateX(-5rem) translateY(0); }
+  35%, 60% { transform: translateX(-6rem) translateY(0); }
   80%, 100% { transform: translateX(0) translateY(0); }
 }
 
