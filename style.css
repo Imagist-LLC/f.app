@@ -401,6 +401,13 @@ rt {
   margin-bottom: 1rem;
 }
 
+.icon-accessibility {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
 .audience-card h3 {
   font-size: 1.125rem;
   font-weight: 600;
