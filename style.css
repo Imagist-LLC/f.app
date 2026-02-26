@@ -274,7 +274,7 @@ img, svg {
 }
 
 .section-subtitle {
-  font-size: clamp(0.9375rem, 2vw, 1.125rem);
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
   color: var(--color-text-secondary);
   text-align: center;
   max-width: 600px;
