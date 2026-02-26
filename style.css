@@ -188,17 +188,25 @@ img, svg {
   50% { transform: translateY(-4px); }
 }
 
-/* Hero animation: cat and chair converge above "sits" */
+/* Hero animation: cat and chair converge above "sits" — only on wide viewports where the sentence stays on one line */
 .hero-cat {
   position: relative;
   z-index: 2;
-  animation: cat-to-sits 6s ease-in-out infinite !important;
 }
 
 .hero-chair {
   position: relative;
   z-index: 1;
-  animation: chair-to-sits 6s ease-in-out infinite !important;
+}
+
+@media (min-width: 540px) {
+  .hero-cat {
+    animation: cat-to-sits 6s ease-in-out infinite !important;
+  }
+
+  .hero-chair {
+    animation: chair-to-sits 6s ease-in-out infinite !important;
+  }
 }
 
 @keyframes cat-to-sits {
