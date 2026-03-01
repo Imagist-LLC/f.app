@@ -41,6 +41,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
@@ -50,6 +51,11 @@
     .teaser {
       text-align: center;
       padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .teaser-name {
@@ -61,19 +67,18 @@
     }
 
     .teaser-ipa {
-      font-size: clamp(1.25rem, 3.5vw, 2rem);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
       font-weight: 300;
       color: var(--color-text-secondary);
       letter-spacing: 0.05em;
-      margin-bottom: 3rem;
     }
 
     .teaser-coming {
-      font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);
-      font-weight: 500;
+      font-size: clamp(0.75rem, 1.25vw, 0.875rem);
+      font-weight: 400;
       color: var(--color-text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.08em;
+      padding-bottom: 3rem;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -97,8 +102,8 @@
   <main class="teaser">
     <h1 class="teaser-name">Phonetic</h1>
     <p class="teaser-ipa">/fun&#xB7;ET&#xB7;ik/</p>
-    <p class="teaser-coming">Coming soon to the Apple App Store</p>
   </main>
+  <p class="teaser-coming">Coming soon</p>
 
 </body>
 </html>
