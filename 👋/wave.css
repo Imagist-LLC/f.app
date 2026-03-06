@@ -1,4 +1,6 @@
-/* ===== Wave Hello Component ===== */
+/* ===== Wave Hello Component =====
+   Pure CSS. 9 greetings, 5s each, 45s cycle.
+   Drop wave.css + the .wave-hello markup into any page. */
 
 .wave-hello {
   display: flex;
@@ -8,65 +10,168 @@
   user-select: none;
 }
 
+/* ----- Hand ----- */
+
 .wave-hand {
   font-size: clamp(6rem, 20vw, 10rem);
   line-height: 1;
   transform-origin: 70% 85%;
-  will-change: transform;
+  animation: wave-cycle 45s linear infinite;
 }
 
-.wave-hand.waving {
-  animation: wave var(--wave-duration, 0.9s) var(--wave-ease, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+/* 9 waves, each with different rotation values for organic feel.
+   Each wave spans ~2.5% of the 45s cycle (~1.1s).
+   Slot boundaries: 0, 11.11, 22.22, 33.33, 44.44, 55.56, 66.67, 77.78, 88.89 */
+
+@keyframes wave-cycle {
+  /* Wave 1 — big friendly opener */
+  0%      { transform: rotate(0deg); }
+  0.5%    { transform: rotate(20deg); }
+  1%      { transform: rotate(-10deg); }
+  1.5%    { transform: rotate(14deg); }
+  2%      { transform: rotate(-5deg); }
+  2.5%    { transform: rotate(0deg); }
+
+  /* rest */
+  11.1%   { transform: rotate(0deg); }
+
+  /* Wave 2 — tighter, quicker */
+  11.11%  { transform: rotate(0deg); }
+  11.6%   { transform: rotate(16deg); }
+  12.1%   { transform: rotate(-14deg); }
+  12.6%   { transform: rotate(8deg); }
+  13.1%   { transform: rotate(-3deg); }
+  13.6%   { transform: rotate(0deg); }
+
+  22.21%  { transform: rotate(0deg); }
+
+  /* Wave 3 — wide arc */
+  22.22%  { transform: rotate(0deg); }
+  22.72%  { transform: rotate(24deg); }
+  23.22%  { transform: rotate(-8deg); }
+  23.72%  { transform: rotate(18deg); }
+  24.22%  { transform: rotate(-6deg); }
+  24.72%  { transform: rotate(0deg); }
+
+  33.32%  { transform: rotate(0deg); }
+
+  /* Wave 4 — gentle */
+  33.33%  { transform: rotate(0deg); }
+  33.83%  { transform: rotate(12deg); }
+  34.33%  { transform: rotate(-8deg); }
+  34.83%  { transform: rotate(9deg); }
+  35.33%  { transform: rotate(-3deg); }
+  35.83%  { transform: rotate(0deg); }
+
+  44.43%  { transform: rotate(0deg); }
+
+  /* Wave 5 — confident */
+  44.44%  { transform: rotate(0deg); }
+  44.94%  { transform: rotate(22deg); }
+  45.44%  { transform: rotate(-10deg); }
+  45.94%  { transform: rotate(15deg); }
+  46.44%  { transform: rotate(-4deg); }
+  46.94%  { transform: rotate(0deg); }
+
+  55.55%  { transform: rotate(0deg); }
+
+  /* Wave 6 — snappy */
+  55.56%  { transform: rotate(0deg); }
+  55.96%  { transform: rotate(18deg); }
+  56.36%  { transform: rotate(-12deg); }
+  56.76%  { transform: rotate(10deg); }
+  57.16%  { transform: rotate(-4deg); }
+  57.56%  { transform: rotate(0deg); }
+
+  66.66%  { transform: rotate(0deg); }
+
+  /* Wave 7 — loose */
+  66.67%  { transform: rotate(0deg); }
+  67.27%  { transform: rotate(20deg); }
+  67.87%  { transform: rotate(-6deg); }
+  68.47%  { transform: rotate(14deg); }
+  69.07%  { transform: rotate(-3deg); }
+  69.67%  { transform: rotate(0deg); }
+
+  77.77%  { transform: rotate(0deg); }
+
+  /* Wave 8 — subtle */
+  77.78%  { transform: rotate(0deg); }
+  78.18%  { transform: rotate(14deg); }
+  78.58%  { transform: rotate(-10deg); }
+  78.98%  { transform: rotate(8deg); }
+  79.38%  { transform: rotate(-3deg); }
+  79.78%  { transform: rotate(0deg); }
+
+  88.88%  { transform: rotate(0deg); }
+
+  /* Wave 9 — warm closer */
+  88.89%  { transform: rotate(0deg); }
+  89.39%  { transform: rotate(20deg); }
+  89.89%  { transform: rotate(-12deg); }
+  90.39%  { transform: rotate(16deg); }
+  90.89%  { transform: rotate(-5deg); }
+  91.39%  { transform: rotate(0deg); }
+
+  100%    { transform: rotate(0deg); }
 }
 
-@keyframes wave {
-  0%   { transform: rotate(0deg); }
-  15%  { transform: rotate(var(--wave-peak, 18deg)); }
-  30%  { transform: rotate(var(--wave-valley, -10deg)); }
-  45%  { transform: rotate(var(--wave-peak-2, 14deg)); }
-  60%  { transform: rotate(var(--wave-valley-2, -6deg)); }
-  75%  { transform: rotate(var(--wave-peak-3, 8deg)); }
-  100% { transform: rotate(0deg); }
+/* ----- Greetings ----- */
+
+.wave-greetings {
+  position: relative;
+  min-height: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* widest greeting sets the width */
+  min-width: 5ch;
 }
 
 .wave-greeting {
-  font-family: 'SF Pro Rounded', 'SF Pro Display', ui-rounded, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  position: absolute;
+  white-space: nowrap;
+  font-family: ui-rounded, 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  text-align: center;
-  min-height: 1.2em;
-  color: var(--color-text);
+  color: var(--color-text, #1d1d1f);
+
+  /* clip-path reveal: left-to-right like writing */
+  clip-path: inset(0 100% 0 0);
+  animation: greeting-show 45s linear infinite;
+  animation-delay: calc(-45s + var(--i) * 5s);
 }
 
-.wave-greeting.fade-out {
-  animation: greetFadeOut 0.3s ease-in forwards;
+/* Reveal left→right (like writing), hold, then slide out left→right */
+@keyframes greeting-show {
+  /* hidden (clipped from right) */
+  0%      { clip-path: inset(0 100% 0 0);  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+  /* revealed — eases out like a pen finishing a word */
+  1.8%    { clip-path: inset(0 0 0 0);      animation-timing-function: linear; }
+  /* hold */
+  9.2%    { clip-path: inset(0 0 0 0);      animation-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19); }
+  /* hidden (clipped from left) — eases in like a quick swipe */
+  11%     { clip-path: inset(0 0 0 100%);   animation-timing-function: step-end; }
+  /* instant reset back to right-clipped */
+  11.11%  { clip-path: inset(0 100% 0 0); }
+  100%    { clip-path: inset(0 100% 0 0); }
 }
 
-.wave-greeting.fade-in {
-  animation: greetFadeIn 0.35s ease-out forwards;
-}
+/* ----- Reduced motion ----- */
 
-@keyframes greetFadeOut {
-  0%   { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-8px); }
-}
-
-@keyframes greetFadeIn {
-  0%   { opacity: 0; transform: translateY(8px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .wave-hand.waving {
-    animation: none !important;
+  .wave-hand {
+    animation: none;
   }
 
-  .wave-greeting.fade-out,
-  .wave-greeting.fade-in {
-    animation: none !important;
-    opacity: 1;
-    transform: none;
+  .wave-greeting {
+    animation-duration: 0.01ms;
+    clip-path: none;
+  }
+
+  /* just show the first greeting */
+  .wave-greeting:not([style*="--i:0"]) {
+    display: none;
   }
 }
